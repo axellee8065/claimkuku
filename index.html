@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap the Kuku Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu-screen">
+        <video id="background-video" autoplay loop muted>
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div id="menu-container">
+            <button id="solo-hunt-button" class="mode-button">Solo Hunt</button>
+            <button id="final-strike-button" class="mode-button" disabled>Final Strike (First Strike)</button>
+            <button id="last-strike-button" class="mode-button" disabled>Final Strike (Last Strike)</button>
+        </div>
+    </div>
+
+    <div id="game-container"></div>
+    <p id="game-info">
+        Score: <span id="score">0</span> | 
+        High Score: <span id="high-score">0</span> | 
+        Time Left: <span id="timer">30</span> seconds
+    </p>
+
+    <audio id="bg-music" src="background-music.mp3" loop></audio>
+    <audio id="tap-sound" src="tap-sound.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
+

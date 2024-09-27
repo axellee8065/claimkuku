@@ -1,0 +1,117 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+#menu-screen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mode-button {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.mode-button:disabled {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+}
+
+#game-container {
+    width: 90%;
+    height: 70vh;
+    max-width: 500px;
+    margin: 20px auto;
+    background: url('background.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    border: 2px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+}
+
+.character {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.red {
+    background-image: url('red-kuku.png');
+}
+
+.gold {
+    background-image: url('gold-kuku.png');
+}
+
+.normal {
+    background-image: url('normal-kuku.png');
+}
+
+#game-info {
+    margin-top: 20px;
+    font-size: 18px;
+    display: none;
+}
+
+.clicked {
+    animation: pop 0.3s ease-in-out forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+    100% { transform: scale(1.5) rotate(360deg); opacity: 0; }
+}
+
+
+
+
+
+
+
+
+
+
+
